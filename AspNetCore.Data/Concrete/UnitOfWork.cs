@@ -18,6 +18,7 @@ namespace AspNetCoreBlog.Data.Concrete
         private EfRoleRepository _roleRepository;
         private EfUserRepository _userRepository;
 
+        
         public UnitOfWork(AspNetCoreBlogContext context)
         {
             _context = context;
@@ -32,14 +33,15 @@ namespace AspNetCoreBlog.Data.Concrete
 
         public IUserRepository Users => _userRepository ?? new EfUserRepository(_context);
 
+        public async ValueTask DisposeAsync()
+        {
+            await _context.DisposeAsync();
+        }
+
         public async Task<int> SaveAsync()
         {
             return await _context.SaveChangesAsync();
         }
 
-        public async ValueTask DisposeAsync()
-        {
-            await _context.DisposeAsync();
-        }
     }
 }

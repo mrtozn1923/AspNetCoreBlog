@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreBlog.Data.Abstract
 {
-    public interface IUnitOfWork:IDisposable
+    public interface IUnitOfWork:IAsyncDisposable
     {
         IArticleRepository Articles { get; }
         ICategoryRepository Categories { get; }
