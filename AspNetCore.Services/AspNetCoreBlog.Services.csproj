@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCore.Data\AspNetCoreBlog.Data.csproj" />
+    <ProjectReference Include="..\AspNetCore.Entities\AspNetCoreBlog.Entities.csproj" />
+    <ProjectReference Include="..\AspNetCoreBlog.Shared\AspNetCoreBlog.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
