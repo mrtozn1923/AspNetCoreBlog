@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCore.Services\AspNetCoreBlog.Services.csproj" />
+  </ItemGroup>
+
 </Project>
