@@ -1,7 +1,10 @@
+using AspNetCoreBlog.Services.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.LoadMyServices();
 
 var app = builder.Build();
 
